@@ -19,7 +19,6 @@ class UnderBarrelSlot;
 class CfgWeapons
 {
 	class Rifle_Base_F;
-	class srifle_EBR_F;
 	class Rifle_Long_Base_F: Rifle_Base_F
 	{
 		class WeaponSlotsInfo;
@@ -27,6 +26,9 @@ class CfgWeapons
 	class UGL_F;
 	//Base Rifles
 	class DMR_06_base_F: Rifle_Long_Base_F //M14
+	{
+	};
+	class EBR_base_F: Rifle_Long_Base_F
 	{
 	};
 	class LRR_base_F: Rifle_Long_Base_F //LRR
@@ -133,6 +135,20 @@ class CfgWeapons
 		};
 	};
 	//-----------------------------------------EBR------------------------------------------//
+	class srifle_EBR_F: EBR_base_F
+	{
+		scope = 0;
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				compatibleItems[] = {"muzzle_snds_93mmg","muzzle_snds_93mmg_tan"};
+				iconPosition[] = {0.0,0.43};
+				iconScale = 0.2;
+			};
+		};
+	};
 	class 111SOG_EBR_black_F: srifle_EBR_F
 	{
 		author = "Shrike";
