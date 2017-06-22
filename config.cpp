@@ -1,10 +1,3 @@
-
-
-///Testing Github SYNC
-
-//Change #2
-
-
 class CfgPatches
 {
 	class KRS_Weapons
