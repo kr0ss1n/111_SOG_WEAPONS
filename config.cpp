@@ -1,12 +1,12 @@
 class CfgPatches
 {
-	class KRS_Weapons
+	class 111_WEAPONS
 	{
 		addonRootClass = "A3_Weapons_F_Mark";
 		requiredAddons[] = {"A3_Weapons_F_Mark","rhsusf_c_weapons"};
 		requiredVersion = 0.1;
 		units[] = {};
-		weapons[] = {"KRS_M14_TAN","KRS_M14_WOOD","KRS_M14_TAN_CAMO","srifle_LRR_F"};
+		weapons[] = {"KRS_M14_TAN","KRS_M14_WOOD","KRS_M14_TAN_CAMO","srifle_LRR_F","111SOG_EBR_black_F","111SOG_EBR_DE_F"};
 	};
 };
 class Mode_SemiAuto;
@@ -19,6 +19,7 @@ class UnderBarrelSlot;
 class CfgWeapons
 {
 	class Rifle_Base_F;
+	class srifle_EBR_F;
 	class Rifle_Long_Base_F: Rifle_Base_F
 	{
 		class WeaponSlotsInfo;
@@ -130,6 +131,27 @@ class CfgWeapons
 				iconScale = 0.2;
 			};
 		};
+	};
+	//-----------------------------------------EBR------------------------------------------//
+	class 111SOG_EBR_black_F: srifle_EBR_F
+	{
+		author = "Shrike";
+		baseWeapon = "111SOG_EBR_black_F";
+		displayName = "Mk14 EBR 7.62 mm (Black)";
+		scope = 2;
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"\111_SOG_WEAPONS\data\ebr01_black_co.paa","\111_SOG_WEAPONS\data\ebr02_black_co.paa"};
+		hiddenSelectionsMaterials[] = {"\111_SOG_WEAPONS\data\m14_ebr01.rvmat","\111_SOG_WEAPONS\data\m14_ebr02.rvmat"};
+	};
+	class 111SOG_EBR_DE_F: srifle_EBR_F
+	{
+		author = "Shrike";
+		baseWeapon = "111SOG_EBR_AOR1_F";
+		displayName = "Mk14 EBR 7.62 mm (DE)";
+		scope = 2;
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"\111_SOG_WEAPONS\data\ebr01_AOR1_co.paa","\111_SOG_WEAPONS\data\ebr02_AOR1_co.paa"};
+		hiddenSelectionsMaterials[] = {"\111_SOG_WEAPONS\data\m14_ebr01.rvmat","\111_SOG_WEAPONS\data\m14_ebr02.rvmat"};
 	};
 };
 
